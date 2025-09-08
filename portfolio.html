@@ -2,65 +2,408 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Portfolio</title>
-
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="nerdy2.ico">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+    <title>Portfolio - Healthcare Integration Specialist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      
+      body {
+        font-family: 'Montserrat', sans-serif;
+        color: #40514E;
+        background-color: #f9f9f9;
+        line-height: 1.6;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      h3 {
+        font-family: 'Merriweather', serif;
+        font-size: 2.5rem;
+        color: #1e836c;
+        margin: 30px auto;
+        text-align: center;
+        padding: 10px;
+        border-bottom: 2px solid #1e836c;
+      }
+      
+      .header {
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 30px;
+      }
+      
+      .tagline {
+        font-style: italic;
+        color: #666;
+        margin-top: 10px;
+      }
+      
+      .portfolio-item {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        margin: 40px 0;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+      }
+      
+      .portfolio-item:hover {
+        transform: translateY(-5px);
+      }
+      
+      .item-header {
+        background: #1e836c;
+        color: white;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      
+      .item-content {
+        padding: 25px;
+      }
+      
+      .btn {
+        display: inline-block;
+        background: #1e836c;
+        color: white;
+        padding: 12px 25px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 15px 0;
+        transition: background 0.3s;
+        border: none;
+        cursor: pointer;
+      }
+      
+      .btn:hover {
+        background: #156552;
+      }
+      
+      .btn-outline {
+        background: transparent;
+        border: 2px solid #1e836c;
+        color: #1e836c;
+      }
+      
+      .btn-outline:hover {
+        background: #1e836c;
+        color: white;
+      }
+      
+      .medical-schemes {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        margin: 25px 0;
+        flex-wrap: wrap;
+      }
+      
+      .scheme-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #e8f5f1;
+        padding: 15px;
+        border-radius: 10px;
+        min-width: 120px;
+      }
+      
+      .scheme-logo {
+        width: 60px;
+        height: 60px;
+        background: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: #1e836c;
+        margin-bottom: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+      
+      .scheme-name {
+        font-weight: bold;
+        color: #1e836c;
+      }
+      
+      .scheme-desc {
+        font-size: 0.8rem;
+        color: #666;
+        text-align: center;
+        margin-top: 5px;
+      }
+      
+      .features {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin: 25px 0;
+      }
+      
+      .feature {
+        flex: 1 0 280px;
+        background: #f5fbf9;
+        padding: 20px;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        border-left: 4px solid #1e836c;
+      }
+      
+      .feature i {
+        color: #1e836c;
+        margin-right: 10px;
+        font-size: 1.2rem;
+      }
+      
+      .tech-stack {
+        background: #e8f5f1;
+        padding: 15px;
+        border-radius: 8px;
+        margin: 20px 0;
+      }
+      
+      .tech-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      
+      .tech-tag {
+        background: #1e836c;
+        color: white;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+      }
+      
+      .footer {
+        text-align: center;
+        margin-top: 50px;
+        padding: 20px;
+        color: #666;
+        border-top: 1px solid #ddd;
+      }
+      
+      @media (max-width: 768px) {
+        .item-header {
+          flex-direction: column;
+          text-align: center;
+          gap: 15px;
+        }
+        
+        .features {
+          flex-direction: column;
+        }
+        
+        .medical-schemes {
+          flex-direction: column;
+          align-items: center;
+        }
+        
+        .scheme-item {
+          width: 100%;
+          max-width: 200px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <h3>Portfolio</h3>
-
-     <br>
-     </div> 
-     <div class="contact-me">  
-      <a class="btn" href="https://portal.weeva.earth/">Weeva</a>
-    <br>
-       <p>I am currently working on/with a project called weeva. This is platform for companies to track their sustainability metrics.The Application backend is in c# while the frontend is in Angular.The portal is made up of microservices which are managed using kubernetes and hosted on Azure</p>
-     <br>
-    
-    <br>
-     </div> 
-     <div class="contact-me">  
-      <a class="btn" href="https://oversite.cloud/">Oversite</a>
-    <br>
-       <p>I worked on the Oversite platform - which is an asset management and tracking tool.The Front end is built in React while the backend is in Node. The code is mostly written in Typescript and JS while the cloud platform used is AWS.</p>
-     <br>
-     <div class="contact-me">  
-      <a class="btn" href="https://playpro.supersportschools.com/">Play Pro</a>
-     </div>
-     <br>
-       <p>I managed the building and maintainance of this unique web app which is used for schools onboarding process onto the Supersport schools platform. The backend is in Node and express while the frontend is built in React.</p>
-     <br>
-     <div class="contact-me">  
-      <a class="btn" href="https://apply.medipet.co.za/?_ga=2.199957486.1951639273.1650437944-1503335319.1650437944">Medipet</a>
-     </div>
-     <br>
-       <p>I helped build and maintain the medipet registration frontend which receives data from a user and sends it to mailchimp while also showing results calculated for the best quote(derived  from a backend api).The front end is in React while the backend is Node</p>
-     <br>
-     <div class="contact-me">  
-      <a class="btn" href="https://kb.oboxthemes.com/">KB Obox themes(Writer)</a>
-     </div>
-     <br>
-       <p>I wrote a lot of web content for the site which explains development processes and new features within the elementor,webflow and Wordpress space.</p>
-     <br>
-     <div class="contact-me"> 
-      <a class="btn" href="https://locationbank.co.za/">Business Positioning system</a>
-     </div>
-    <br>
-    <p>I was part of the maintenance and development team for a business positioning system called Location Bank. It runs on the .Net framework in the backend and Angular for the frontend</p>
-     <br>
-      <div class="contact-me">
-     
-      <a class="btn" href="https://www.traccar.org/">Global positioning system</a>
+    <div class="header">
+      <h1>Healthcare Technology Portfolio</h1>
+      <p class="tagline">Building integrated solutions for clinical practitioners and medical schemes</p>
     </div>
-     <br>
-    <p>I was part of the development team that migrated traccar GPS system from a React front end and Java backend app to Vue JS/node app</p>
-      <br>
-   
 
+    <h3>Featured Project</h3>
     
+    <!-- New AlignD section as featured project -->
+    <div class="portfolio-item">
+      <div class="item-header">
+        <h2><i class="fas fa-stethoscope"></i> AlignD Client Management System</h2>
+        <a href="https://alignd.co.za/" class="btn" target="_blank">Visit Website</a>
+      </div>
+      
+      <div class="item-content">
+        <p>Currently leading development of a comprehensive client management system for healthcare practitioners that integrates with multiple external systems and medical scheme APIs.</p>
+        
+        <div class="medical-schemes">
+          <div class="scheme-item">
+            <div class="scheme-logo">
+              <i class="fas fa-heartbeat"></i>
+            </div>
+            <span class="scheme-name">GEMS</span>
+            <span class="scheme-desc">(Government Employees Medical Scheme - South Africa)</span>
+          </div>
+          
+          <div class="scheme-item">
+            <div class="scheme-logo">
+              <i class="fas fa-pills"></i>
+            </div>
+            <span class="scheme-name">Bonitas</span>
+            <span class="scheme-desc">(One of SA's largest medical schemes)</span>
+          </div>
+          
+          <div class="scheme-item">
+            <div class="scheme-logo">
+              <i class="fas fa-hospital"></i>
+            </div>
+            <span class="scheme-name">Polmed</span>
+            <span class="scheme-desc">(Police Medical Scheme - South Africa)</span>
+          </div>
+        </div>
+        
+        <div class="features">
+          <div class="feature">
+            <i class="fas fa-database"></i> <strong>Unified Data Collection</strong> - Aggregating patient data from multiple healthcare systems into a single platform
+          </div>
+          <div class="feature">
+            <i class="fas fa-api"></i> <strong>API Integration</strong> - Seamless integration with medical scheme APIs for real-time eligibility checks and claims processing
+          </div>
+          <div class="feature">
+            <i class="fas fa-shield-alt"></i> <strong>Security & Compliance</strong> - HIPAA-compliant data handling with robust privacy protection measures
+          </div>
+          <div class="feature">
+            <i class="fas fa-chart-line"></i> <strong>Advanced Analytics</strong> - Comprehensive reporting tools for clinical practitioners and practice management
+          </div>
+        </div>
+        
+        <div class="tech-stack">
+          <h3>Technology Stack</h3>
+          <div class="tech-tags">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">REST APIs</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">AWS</span>
+            <span class="tech-tag">OAuth 2.0</span>
+            <span class="tech-tag">HL7 FHIR</span>
+          </div>
+        </div>
+        
+        <p>The system serves as a centralized platform for healthcare providers to manage patient data, process claims, and access real-time information from medical aids. Special attention has been given to healthcare compliance, data security, and creating an intuitive user experience for clinical practitioners.</p>
+        
+        <a href="#contact" class="btn btn-outline">Request Demo</a>
+      </div>
+    </div>
+
+    <h3>Other Projects</h3>
     
+    <!-- Existing portfolio items -->
+    <div class="portfolio-item">
+      <div class="item-header">
+        <h2><i class="fas fa-leaf"></i> Weeva Sustainability Platform</h2>
+        <a href="https://portal.weeva.earth/" class="btn" target="_blank">Visit Website</a>
+      </div>
+      <div class="item-content">
+        <p>Worked on a platform for companies to track their sustainability metrics. The application backend is in C# while the frontend is in Angular. The portal is made up of microservices which are managed using Kubernetes and hosted on Azure.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">C#</span>
+          <span class="tech-tag">Angular</span>
+          <span class="tech-tag">Kubernetes</span>
+          <span class="tech-tag">Azure</span>
+          <span class="tech-tag">Microservices</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="portfolio-item">
+      <div class="item-header">
+        <h2><i class="fas fa-map-marker-alt"></i> Oversite Asset Management</h2>
+        <a href="https://oversite.cloud/" class="btn" target="_blank">Visit Website</a>
+      </div>
+      <div class="item-content">
+        <p>Worked on the Oversite platform - which is an asset management and tracking tool. The Front end is built in React while the backend is in Node. The code is mostly written in Typescript and JS while the cloud platform used is AWS.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">AWS</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="portfolio-item">
+      <div class="item-header">
+        <h2><i class="fas fa-basketball-ball"></i> Play Pro - Supersport Schools</h2>
+        <a href="https://playpro.supersportschools.com/" class="btn" target="_blank">Visit Website</a>
+      </div>
+      <div class="item-content">
+        <p>Managed the building and maintenance of this unique web app which is used for schools onboarding process onto the Supersport schools platform. The backend is in Node and Express while the frontend is built in React.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">Express</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="portfolio-item">
+      <div class="item-header">
+        <h2><i class="fas fa-paw"></i> Medipet Registration Portal</h2>
+        <a href="https://apply.medipet.co.za/" class="btn" target="_blank">Visit Website</a>
+      </div>
+      <div class="item-content">
+        <p>Helped build and maintain the Medipet registration frontend which receives data from a user and sends it to Mailchimp while also showing results calculated for the best quote (derived from a backend API). The front end is in React while the backend is Node.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">Mailchimp API</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="portfolio-item">
+      <div class="item-header">
+        <h2><i class="fas fa-pencil-alt"></i> KB Obox Themes (Technical Writer)</h2>
+        <a href="https://kb.oboxthemes.com/" class="btn" target="_blank">Visit Website</a>
+      </div>
+      <div class="item-content">
+        <p>Wrote extensive web content for the site which explains development processes and new features within the Elementor, Webflow and WordPress space.</p>
+      </div>
+    </div>
+    
+    <div class="portfolio-item">
+      <div class="item-header">
+        <h2><i class="fas fa-map-pin"></i> Business Positioning System</h2>
+        <a href="https://locationbank.co.za/" class="btn" target="_blank">Visit Website</a>
+      </div>
+      <div class="item-content">
+        <p>Was part of the maintenance and development team for a business positioning system called Location Bank. It runs on the .NET framework in the backend and Angular for the frontend.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">.NET</span>
+          <span class="tech-tag">Angular</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="portfolio-item">
+      <div class="item-header">
+        <h2><i class="fas fa-satellite"></i> Global Positioning System</h2>
+        <a href="https://www.traccar.org/" class="btn" target="_blank">Visit Website</a>
+      </div>
+      <div class="item-content">
+        <p>Was part of the development team that migrated Traccar GPS system from a React front end and Java backend app to Vue JS/Node app.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">Vue.js</span>
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">Java</span>
+          <span class="tech-tag">React</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <p>© 2023 Healthcare Technology Specialist | Integrating Systems for Better Patient Care</p>
+    </div>
   </body>
 </html>
