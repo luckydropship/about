@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Portfolio - Healthcare Integration Specialist</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
       * {
         box-sizing: border-box;
@@ -12,57 +13,65 @@
       }
       
       body {
-        font-family: 'Montserrat', sans-serif;
-        color: #40514E;
-        background-color: #f9f9f9;
+        font-family: 'Open Sans', sans-serif;
+        color: #444;
+        background-color: #ffffff;
         line-height: 1.6;
         padding: 20px;
         max-width: 1200px;
         margin: 0 auto;
       }
       
+      h1, h2, h3 {
+        font-family: 'Montserrat', sans-serif;
+        color: #2c3e50;
+        margin-bottom: 20px;
+      }
+      
       h3 {
-        font-family: 'Merriweather', serif;
-        font-size: 2.5rem;
-        color: #1e836c;
-        margin: 30px auto;
+        font-size: 2rem;
         text-align: center;
-        padding: 10px;
-        border-bottom: 2px solid #1e836c;
+        margin: 40px auto 30px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #eaeaea;
+        width: 80%;
       }
       
       .header {
         text-align: center;
-        padding: 20px;
-        margin-bottom: 30px;
+        padding: 30px 20px;
+        margin-bottom: 10px;
       }
       
       .tagline {
-        font-style: italic;
-        color: #666;
-        margin-top: 10px;
+        font-size: 1.2rem;
+        color: #7f8c8d;
+        margin-top: 15px;
+        font-weight: 300;
       }
       
       .portfolio-item {
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        margin: 40px 0;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        margin: 30px 0;
         overflow: hidden;
-        transition: transform 0.3s ease;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid #f0f0f0;
       }
       
       .portfolio-item:hover {
-        transform: translateY(-5px);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
       }
       
       .item-header {
-        background: #1e836c;
-        color: white;
+        background: #f9f9f9;
         padding: 20px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        border-bottom: 1px solid #f0f0f0;
       }
       
       .item-content {
@@ -71,37 +80,38 @@
       
       .btn {
         display: inline-block;
-        background: #1e836c;
+        background: #3498db;
         color: white;
-        padding: 12px 25px;
-        border-radius: 8px;
+        padding: 10px 20px;
+        border-radius: 6px;
         text-decoration: none;
-        font-weight: bold;
-        margin: 15px 0;
+        font-weight: 500;
+        margin: 10px 0;
         transition: background 0.3s;
         border: none;
         cursor: pointer;
+        font-size: 0.9rem;
       }
       
       .btn:hover {
-        background: #156552;
+        background: #2980b9;
       }
       
       .btn-outline {
         background: transparent;
-        border: 2px solid #1e836c;
-        color: #1e836c;
+        border: 1px solid #3498db;
+        color: #3498db;
       }
       
       .btn-outline:hover {
-        background: #1e836c;
+        background: #3498db;
         color: white;
       }
       
       .medical-schemes {
         display: flex;
         justify-content: center;
-        gap: 25px;
+        gap: 20px;
         margin: 25px 0;
         flex-wrap: wrap;
       }
@@ -110,34 +120,37 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background: #e8f5f1;
+        background: #f9f9f9;
         padding: 15px;
-        border-radius: 10px;
+        border-radius: 8px;
         min-width: 120px;
+        border: 1px solid #eee;
       }
       
       .scheme-logo {
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
         background: white;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 24px;
-        color: #1e836c;
+        font-size: 20px;
+        color: #3498db;
         margin-bottom: 10px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        border: 1px solid #eee;
       }
       
       .scheme-name {
-        font-weight: bold;
-        color: #1e836c;
+        font-weight: 600;
+        color: #2c3e50;
+        font-size: 0.9rem;
       }
       
       .scheme-desc {
-        font-size: 0.8rem;
-        color: #666;
+        font-size: 0.75rem;
+        color: #7f8c8d;
         text-align: center;
         margin-top: 5px;
       }
@@ -151,24 +164,25 @@
       
       .feature {
         flex: 1 0 280px;
-        background: #f5fbf9;
-        padding: 20px;
-        border-radius: 8px;
-        font-size: 0.95rem;
-        border-left: 4px solid #1e836c;
+        background: #f9f9f9;
+        padding: 18px;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        border-left: 3px solid #3498db;
       }
       
       .feature i {
-        color: #1e836c;
+        color: #3498db;
         margin-right: 10px;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
       }
       
       .tech-stack {
-        background: #e8f5f1;
+        background: #f9f9f9;
         padding: 15px;
-        border-radius: 8px;
+        border-radius: 6px;
         margin: 20px 0;
+        border: 1px solid #eee;
       }
       
       .tech-tags {
@@ -179,19 +193,27 @@
       }
       
       .tech-tag {
-        background: #1e836c;
-        color: white;
+        background: #e8f4fd;
+        color: #3498db;
         padding: 5px 12px;
-        border-radius: 20px;
-        font-size: 0.85rem;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        border: 1px solid #e1f0fa;
       }
       
       .footer {
         text-align: center;
         margin-top: 50px;
-        padding: 20px;
-        color: #666;
-        border-top: 1px solid #ddd;
+        padding: 30px 20px;
+        color: #7f8c8d;
+        border-top: 1px solid #eee;
+        font-size: 0.9rem;
+      }
+      
+      p {
+        margin-bottom: 15px;
+        color: #555;
+        line-height: 1.7;
       }
       
       @media (max-width: 768px) {
@@ -213,6 +235,11 @@
         .scheme-item {
           width: 100%;
           max-width: 200px;
+        }
+        
+        h3 {
+          width: 95%;
+          font-size: 1.6rem;
         }
       }
     </style>
