@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Portfolio - Lucky Mubeti</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -136,13 +136,31 @@
             font-size: 0.9rem;
         }
         
-        .integration-note {
+        .highlight-section {
             background: #f9fafb;
             padding: 15px;
             border-radius: 4px;
             margin: 20px 0;
             font-size: 0.95rem;
             border-left: 3px solid #2c3e50;
+        }
+
+        .highlight-section strong {
+            color: #2c3e50;
+        }
+
+        .responsibilities {
+            margin: 20px 0;
+        }
+
+        .responsibilities ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .responsibilities li {
+            margin-bottom: 8px;
+            color: #444;
         }
         
         @media (max-width: 768px) {
@@ -166,123 +184,149 @@
 <body>
     <div class="header">
         <h1>Portfolio</h1>
-   
     </div>
     
-    <!-- Clean AlignD section -->
+    <!-- Alignd - Enhanced Senior Level -->
     <div class="portfolio-item">
         <div class="item-header">
-            <h2><i class="fas fa-stethoscope"></i> Alignd Client Management System</h2>
+            <h2><i class="fas fa-stethoscope"></i> Alignd Healthcare Platform</h2>
             <a href="https://alignd.co.za/" class="btn" target="_blank">Visit Website</a>
         </div>
         
         <div class="item-content">
-            <p>Currently leading development of a comprehensive client management system for healthcare practitioners that integrates with multiple external systems and medical scheme APIs including GEMS, Bonitas, and Polmed.</p>
+            <p><strong>Software Engineer (May 2024 - Present)</strong></p>
             
-            <div class="integration-note">
-                <strong>Integration Note:</strong> The system seamlessly connects with South African medical schemes including GEMS (Government Employees Medical Scheme), Bonitas (one of SA's largest medical schemes), and Polmed (Police Medical Scheme).
+            <p>Built and owned backend services for a healthcare management system integrating with South African medical schemes (GEMS, Bonitas, Polmed) serving healthcare providers nationwide.</p>
+            
+            <div class="responsibilities">
+                <strong>Key Contributions:</strong>
+                <ul>
+                    <li>Architected serverless ETL pipelines using AWS Lambda to automate data extraction from medical scheme APIs, processing and loading claim data into PostgreSQL for real-time analytics</li>
+                    <li>Designed fault-tolerant integration layer handling unreliable external APIs with retry logic and comprehensive error tracking via Sentry</li>
+                    <li>Implemented clinical alerting system monitoring critical patient data points across distributed services</li>
+                    <li>Built and maintained cloud infrastructure on AWS (EC2, RDS, S3, Lambda) and Kubernetes, configuring VPC networking, security groups, and network policies for secure service communication</li>
+                    <li>Mentored development and actuarial interns while conducting code reviews and establishing engineering standards</li>
+                </ul>
             </div>
             
-            <p>The platform serves as a centralized system for healthcare providers to manage patient data, process claims, and access real-time information from medical aids. Built with Django and Python on the backend, Vue.js on the frontend, and deployed on AWS using Docker and Kubernetes with PostGIS for spatial data management.</p>
+            <div class="highlight-section">
+                <strong>Architecture:</strong> Django/Python backend with Vue.js frontend, deployed on AWS using Docker and Kubernetes. PostGIS for spatial queries, Redis for caching, CloudWatch and Sentry for observability.
+            </div>
             
             <div class="tech-stack">
-            
                 <div class="tech-tags">
                     <span class="tech-tag">Django</span>
                     <span class="tech-tag">Python</span>
                     <span class="tech-tag">Vue.js</span>
-                    <span class="tech-tag">AWS</span>
+                    <span class="tech-tag">AWS Lambda</span>
                     <span class="tech-tag">Docker</span>
                     <span class="tech-tag">Kubernetes</span>
+                    <span class="tech-tag">PostgreSQL</span>
                     <span class="tech-tag">PostGIS</span>
+                    <span class="tech-tag">Redis</span>
                     <span class="tech-tag">REST APIs</span>
                 </div>
             </div>
         </div>
     </div>
 
-
-    
-    <!-- Existing portfolio items in minimal style -->
+    <!-- Weeva - Enhanced -->
     <div class="portfolio-item">
         <div class="item-header">
-            <h2><i class="fas fa-leaf"></i> Weeva Sustainability Platform (now known as Travalyst)</h2>
+            <h2><i class="fas fa-leaf"></i> Weeva Sustainability Platform (now Travalyst)</h2>
             <a href="https://travalyst.org/industry/" class="btn" target="_blank">Visit Website</a>
         </div>
         <div class="item-content">
-            <p>Worked on a platform for companies to track their sustainability metrics. The application backend was is in C# while the frontend was in Angular. The portal is made up of microservices which are managed using Kubernetes and hosted on Azure.</p>
+            <p><strong>QA Analyst (May 2023 - April 2024)</strong></p>
+            
+            <p>Built automated testing infrastructure for a sustainability tracking platform serving enterprise companies.</p>
+            
+            <div class="responsibilities">
+                <strong>Key Contributions:</strong>
+                <ul>
+                    <li>Architected automated testing frameworks using TypeScript and Cypress, establishing end-to-end test coverage for critical user journeys</li>
+                    <li>Managed application deployments on Azure, ensuring environment readiness and post-deployment stability</li>
+                    <li>Monitored production performance using Datadog, enabling proactive issue detection</li>
+                    <li>Acted as technical liaison between development and business teams</li>
+                </ul>
+            </div>
+            
+            <div class="highlight-section">
+                <strong>Architecture:</strong> Microservices platform built with C# backend and Angular frontend, managed using Kubernetes and hosted on Azure.
+            </div>
+            
             <div class="tech-tags">
                 <span class="tech-tag">C#</span>
                 <span class="tech-tag">Angular</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Cypress</span>
                 <span class="tech-tag">Kubernetes</span>
                 <span class="tech-tag">Azure</span>
-                <span class="tech-tag">Microservices</span>
+                <span class="tech-tag">Datadog</span>
             </div>
         </div>
     </div>
     
+    <!-- Necta Tech - Enhanced -->
     <div class="portfolio-item">
         <div class="item-header">
-            <h2><i class="fas fa-map-marker-alt"></i> Oversite Asset Management</h2>
+            <h2><i class="fas fa-basketball-ball"></i> Necta Tech Sports Platform</h2>
             <a href="https://oversite.cloud/" class="btn" target="_blank">Visit Website</a>
         </div>
         <div class="item-content">
-            <p>Worked on the Oversite platform - which is an asset management and tracking tool. The Front end is built in React while the backend is in Node. The code is mostly written in Typescript and JS while the cloud platform used is AWS.</p>
+            <p><strong>Software Engineer (September 2022 - May 2023)</strong></p>
+            
+            <p>Built full-stack applications including sports tracking and asset management dashboards.</p>
+            
+            <div class="responsibilities">
+                <strong>Key Contributions:</strong>
+                <ul>
+                    <li>Built and maintained production applications using React frontend and Node.js/NestJS backend</li>
+                    <li>Implemented authentication flows using AWS Cognito with role-based permissions</li>
+                    <li>Deployed and managed Linux servers on DigitalOcean, configuring firewalls and security protocols</li>
+                    <li>Created CI/CD pipelines with GitHub Actions for automated testing and deployments</li>
+                    <li>Introduced Redis caching solutions that improved application performance</li>
+                </ul>
+            </div>
+            
             <div class="tech-tags">
                 <span class="tech-tag">React</span>
                 <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">TypeScript</span>
-                <span class="tech-tag">AWS</span>
+                <span class="tech-tag">NestJS</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">GraphQL</span>
+                <span class="tech-tag">AWS Cognito</span>
+                <span class="tech-tag">Redis</span>
+                <span class="tech-tag">Docker</span>
             </div>
         </div>
     </div>
     
+    <!-- Earlier Projects - Condensed -->
     <div class="portfolio-item">
         <div class="item-header">
-            <h2><i class="fas fa-basketball-ball"></i> Play Pro - Supersport Schools</h2>
-            <a href="https://playpro.supersportschools.com/" class="btn" target="_blank">Visit Website</a>
+            <h2><i class="fas fa-clock"></i> Earlier Projects</h2>
         </div>
         <div class="item-content">
-            <p>Managed the building and maintenance of this unique web app which is used for schools onboarding process onto the Supersport schools platform. The backend is in Node and Express while the frontend is built in React.</p>
-            <div class="tech-tags">
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">Express</span>
-            </div>
-        </div>
-    </div>
-    
-    <div class="portfolio-item">
-        <div class="item-header">
-            <h2><i class="fas fa-paw"></i> Medipet Registration Portal</h2>
-            <a href="https://apply.medipet.co.za/" class="btn" target="_blank">Visit Website</a>
-        </div>
-        <div class="item-content">
-            <p>Helped build and maintain the Medipet registration frontend which receives data from a user and sends it to Mailchimp while also showing results calculated for the best quote (derived from a backend API). The front end is in React while the backend is Node.</p>
-            <div class="tech-tags">
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">Mailchimp API</span>
-            </div>
-        </div>
-    </div>
-    
-    <div class="portfolio-item">
-        <div class="item-header">
-            <h2><i class="fas fa-map-pin"></i> Business Positioning System</h2>
-            <a href="https://locationbank.co.za/" class="btn" target="_blank">Visit Website</a>
-        </div>
-        <div class="item-content">
-            <p>Was part of the maintenance and development team for a business positioning system called Location Bank. It runs on the .NET framework in the backend and Angular for the frontend.</p>
-            <div class="tech-tags">
+            <p><strong>Additional experience across multiple companies (2019-2022):</strong></p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li><strong>AB Group (Dec 2021 - Apr 2022):</strong> Architected migration from monolithic to microservices architecture, integrated external APIs (Joblogic, Access)</li>
+                <li><strong>Silmac (Mar 2021 - Sep 2021):</strong> Migrated Traccar tracking platform from Java to Node.js/React, deployed services on GCP using Docker</li>
+                <li><strong>Medipet, IceBreakers Online, Amonet (2019-2020):</strong> Full-stack development, e-commerce platforms, API integrations, SEO optimization</li>
+            </ul>
+            
+            <div class="tech-tags" style="margin-top: 15px;">
                 <span class="tech-tag">.NET</span>
-                <span class="tech-tag">Angular</span>
+                <span class="tech-tag">C#</span>
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">GCP</span>
+                <span class="tech-tag">SQL Server</span>
             </div>
         </div>
     </div>
     
     <div class="footer">
-        <p>© 2025 Lucky MM</p>
+        <p>© 2025 Lucky Moses Mubeti | Software Engineer</p>
     </div>
 </body>
 </html>
